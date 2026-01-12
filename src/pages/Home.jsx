@@ -181,20 +181,23 @@ const Home = () => {
           <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-20 items-start">
             
             {/* Left Column: Heading + Bio + Skills */}
-            <div className="lg:col-span-2 flex flex-col items-center text-center lg:items-center lg:text-center">
+            <div className="lg:col-span-2 flex flex-col">
                 {/* Heading */}
-                <div className="mb-8">
+                <div className="mb-8 text-center lg:text-center">
                    <h2 className="text-4xl font-bold text-dark-slate inline-block border-b-4 border-asan-gold pb-2">ABOUT</h2>
                 </div>
 
-                {/* Bio Text */}
-                <div className="text-lg leading-relaxed text-gray-700 whitespace-pre-wrap mb-10 max-w-3xl">
-                    {siteConfig?.aboutText || "Welcome to Wajahat's Odyssey - a journey from Electrical Engineering to Python Development. I build small, production-like Flask applications (OOP, SQL, templating, deployment) applying my engineering attention to detail. My project “The Shrine” is a full-stack Flask showcase of clean backend architecture and generative-AI integration. I favor clean, maintainable code and focus on delivering reliable, explainable systems others can maintain."}
-                </div>
+                {/* Bio Text & Skills Container */}
+                <div className="max-w-3xl mx-auto w-full">
+                    {/* Bio Text */}
+                    <div className="text-lg leading-relaxed text-gray-700 whitespace-pre-wrap mb-10 text-left">
+                        {siteConfig?.aboutText || "Welcome to Wajahat's Odyssey - a journey from Electrical Engineering to Python Development. I build small, production-like Flask applications (OOP, SQL, templating, deployment) applying my engineering attention to detail. My project “The Shrine” is a full-stack Flask showcase of clean backend architecture and generative-AI integration. I favor clean, maintainable code and focus on delivering reliable, explainable systems others can maintain."}
+                    </div>
 
-                {/* Skills Block */}
-                <div className="w-full flex justify-center">
-                   <TechSkills skills={skills} />
+                    {/* Skills Block */}
+                    <div className="w-full">
+                       <TechSkills skills={skills} />
+                    </div>
                 </div>
             </div>
 
